@@ -3,10 +3,10 @@ using namespace std;
 
 int minInArray(int arr[], int arrSize);
 int minInArray(int arr[], int arrSize)
-{   int min=0;
+{   int min=arr[0] ;
     for(int i=0;i<arrSize;i++)
     {
-        if(arr[i]<min)
+        if(arr[i]<=min)
         {
             min=arr[i];
         }
