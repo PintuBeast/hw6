@@ -17,25 +17,22 @@ void reverseArray(int arr[],int& arrSize)
 void removeOdd(int arr[], int& arrSize)
 {
     int deleted=0;
-    int i=0,temp;
-    while((i+deleted) < arrSize)
+    int i=0,temp_index=0,n=arrSize;
+    for(int i=0;i<n;i++)
     {
-        if(arr[i] % 2 != 0)
+        if(arr[i]%2 == 0)
         {
-            temp = arr[arrSize-1-deleted];
-            arr[arrSize-1-deleted]=arr[i];
-            arr[i]=temp;
-            deleted++;
+            arr[temp_index++]=arr[i];
+
         }
         else
         {
-            i++;
+            deleted++;
         }
-
     }
+
     arrSize -= deleted;
-    cout<<"The removeODD array size is: "<<arrSize<<"\n"
-        <<"The removeODD output array is: ";
+    cout<<"The removeODD output array is: ";
         for(int i=0;i<arrSize;i++)
         {
             cout<<arr[i]<<" ";
@@ -68,18 +65,19 @@ void splitParity(int arr[], int& arrSize)
 }
 
 int main()
-{   int arrSize=5;
-    int arr[5]={1,2,3,4,5};
-    //reverseArray(arr,arrSize);
-    //removeOdd(arr,arrSize);
-    splitParity(arr,arrSize);
-
-
-    cout<<"The final array size is: "<<arrSize<<"\n"
-        <<"The new array is: ";
+{   int arrSize=8;
+    int arr[8]={2,2,3,3,3,5,7,8};
+    
+    cout<<"The Initial array size is: "<<arrSize<<"\n"
+        <<"The array is: ";
         for(int i=0;i<arrSize;i++)
         {
             cout<<arr[i]<<" ";
         }
+    reverseArray(arr,arrSize);
+    removeOdd(arr,arrSize);
+    splitParity(arr,arrSize);
+
+
     return 0;
 }
