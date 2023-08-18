@@ -15,7 +15,7 @@ void minArrayWithIndex(int arr[])
         }
     }
     cout<<"the minimum value is "<<min
-        <<" and it is located in the following indices: ";
+        <<", and it is located in the following indices: ";
     for(int i=0;i<ARR_SIZE;i++)
     {
         if(arr[i]==min)

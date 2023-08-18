@@ -10,8 +10,6 @@ bool verifyPin(const int PIN[],int userEntry[],int mask[],int pinSize, int maskS
     bool match=true;
     for(int i=0;i<pinSize;i++)
     {   
-       // cout<<"Pin value is "<<PIN[i]<<"  Mask value is: "
-        //    <<mask[PIN[i]] <<" userEntry is: "<<userEntry[i]<<"\n";
         if(mask[PIN[i]]!=userEntry[i])
         {
             match=false;

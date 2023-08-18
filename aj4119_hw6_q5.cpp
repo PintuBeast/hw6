@@ -1,6 +1,16 @@
 #include<iostream>
 #include<string>
 using namespace std;
+void formatMiddleName(string str);
+
+void formatMiddleName(string str)
+{
+    
+    cout<<str[0]<<". ";
+    
+
+}
+
 int main()
 {
     string firstName, middleName, lastName;
@@ -9,6 +19,9 @@ int main()
     cin>>firstName;
     cin>>middleName;
     cin>>lastName;
-    cout<<firstName<<" "<<middleName[0]<<". "<<lastName;
+    
+    cout<<firstName<<" ";
+    formatMiddleName(middleName);
+    cout<<lastName;
     return 0;
 }
