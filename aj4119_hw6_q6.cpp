@@ -5,11 +5,11 @@ bool isNum(string str);
 bool isNum(string str)
 {
     bool isNumber=true;
-    for(int i=0;i<str.length();i++)
+    for(int i = 0 ; i < str.length() ; i++)
     {
-        if((str[i]>='a'&& str[i]<='z') || (str[i]>='A'&& str[i]<='Z'))
+        if((str[i] >= 'a' && str[i] <='z') || (str[i] >= 'A' && str[i] <= 'Z'))
         {
-            isNumber=false;
+            isNumber = false;
         }
 
     }
@@ -18,7 +18,7 @@ bool isNum(string str)
 void maskNum(string str);
 void maskNum(string str)
 {
-        for(int i=0;i<str.length();i++)
+        for(int i = 0 ; i < str.length() ; i++)
     {
         cout<<"x";
 
@@ -29,13 +29,13 @@ void maskNum(string str)
 void parseString(string str);
 void parseString(string str)
 {
-    string word="";
-    for(int i=0;i<=str.length();i++)
+    string word = "";
+    for(int i = 0 ; i <= str.length() ; i++)
     {
         
-        bool isNumber=false;
+        bool isNumber = false;
        // cout<<i<<" "<<(int)str[i]<<"\t";
-        if((int)str[i]==' ' || i == str.length())
+        if((int)str[i] == ' ' || i == str.length())
         {   
             
             if(isNum(word) == true)
@@ -47,10 +47,10 @@ void parseString(string str)
                 cout<<word<<" ";
             }
             //cout<<word<<" "<<isNumber<<"\t";
-            word="";
+            word = "";
         }else
         {
-            word +=str[i];
+            word += str[i];
             
         }
 

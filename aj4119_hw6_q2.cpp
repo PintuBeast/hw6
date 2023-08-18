@@ -6,11 +6,11 @@ bool isPalindrome(string str)
 {
     bool isPal=true;
     int stringLength = str.length();
-    for(int i=0;i<stringLength/2;i++)
+    for(int i = 0 ; i < stringLength / 2 ; i++)
     {
-        if(str[i] != str[stringLength-1-i])
+        if(str[i] != str[stringLength - 1 - i])
         {
-            isPal=false;
+            isPal = false;
             break;
         }
     }
